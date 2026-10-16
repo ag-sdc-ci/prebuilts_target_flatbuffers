@@ -1,0 +1,97 @@
+// Auto-generated prebuilt Blueprint for external/flatbuffers
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.flatbuffers
+
+package {
+    default_applicable_licenses: ["external_flatbuffers_license"],
+}
+
+license {
+    name: "external_flatbuffers_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-Zlib",
+    ],
+    license_text: [
+        "LICENSE",
+        "LICENSE.txt",
+    ],
+}
+
+cc_library_headers {
+    name: "flatbuffer_headers",
+    export_include_dirs: ["include"],
+    vendor_available: true,
+    host_supported: true,
+    sdk_version: "current",
+    min_sdk_version: "apex_inherit",
+    apex_available: [
+        "com.android.adservices",
+        "com.android.extservices",
+        "com.android.neuralnetworks",
+        "com.android.ondevicepersonalization",
+        "test_com.android.neuralnetworks",
+        "//apex_available:platform",
+    ],
+}
+
+cc_prebuilt_binary {
+    name: "flatc",
+    host_supported: true,
+    device_supported: false,
+    srcs: ["bin/flatc"],
+}
+
+java_library {
+    name: "flatbuffers-java",
+    srcs: ["java/**/*.java"],
+    sdk_version: "current",
+    min_sdk_version: "30",
+    java_version: "1.8",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.ondevicepersonalization",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "libflatbuffers-cpp",
+    export_include_dirs: ["include"],
+    host_supported: true,
+    vendor_available: true,
+    check_elf_files: false,
+    static: {
+        srcs: ["lib/libflatbuffers-cpp.a"],
+    },
+    shared: {
+        srcs: ["lib/libflatbuffers-cpp.so"],
+    },
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.btservices",
+        "com.android.extservices",
+    ],
+    min_sdk_version: "30",
+}
+
+cc_prebuilt_library {
+    name: "libflatbuffers",
+    export_include_dirs: ["include"],
+    host_supported: true,
+    vendor_available: true,
+    check_elf_files: false,
+    static: {
+        srcs: ["lib/libflatbuffers.a"],
+    },
+    shared: {
+        srcs: ["lib/libflatbuffers.so"],
+    },
+    prefer: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    min_sdk_version: "30",
+}

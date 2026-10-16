@@ -1,0 +1,9 @@
+libdir=/apex/org.blisslabs.ag.ext.flatbuffers/lib
+includedir=/apex/org.blisslabs.ag.ext.flatbuffers/include
+
+Name: FlatBuffers
+Description: Memory Efficient Serialization Library
+Version: 25.12.19
+
+Libs: -L${libdir} -lflatbuffers
+Cflags: -I${includedir}

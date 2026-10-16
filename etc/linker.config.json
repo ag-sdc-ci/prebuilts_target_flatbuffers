@@ -1,0 +1,28 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_flatc-x86_64-v2.so",
+		    "libdummy_binary_flatc.so",
+		    "libdummy_binary_libflatbuffers.a-x86_64-v2.so",
+		    "libdummy_binary_libflatbuffers.a.so",
+		    "libdummy_ext_flatbuffers-x86_64-v2.so",
+		    "libdummy_ext_flatbuffers.so",
+		    "libdummy_headers_ext_flatbuffers-x86_64-v2.so",
+		    "libdummy_headers_ext_flatbuffers.so",
+		    "libdummy_pkgconfig_ext_flatbuffers-x86_64-v2.so",
+		    "libdummy_pkgconfig_ext_flatbuffers.so",
+		    "libflatbuffers-cpp-x86_64-v2.so",
+		    "libflatbuffers-cpp.so",
+		    "libflatbuffers-x86_64-v2.so",
+		    "libflatbuffers.so"
+	],
+	"requireLibs": [	
+		    "libc.so",
+		    "libc.so.6",
+		    "libdl.so",
+		    "libgcc_s.so.1",
+		    "libm.so",
+		    "libm.so.6",
+		    "libstdc++.so.6"
+	],
+	"visible": true
+}
