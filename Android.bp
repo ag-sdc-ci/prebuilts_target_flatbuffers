@@ -69,10 +69,13 @@ cc_prebuilt_library {
     },
     prefer: true,
     apex_available: [
+        "//apex_available:anyapex",
         "//apex_available:platform",
         "com.android.btservices",
         "com.android.extservices",
     ],
+    sdk_version: "9",
+    stl: "none",
     min_sdk_version: "30",
 }
 
@@ -93,5 +96,7 @@ cc_prebuilt_library {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+    sdk_version: "9",
+    stl: "none",
     min_sdk_version: "30",
 }
